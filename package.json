@@ -1,0 +1,23 @@
+{
+  "name": "sswapsies",
+  "version": "1.0.0",
+  "main": "app.js",
+  "author": "Lilith Miller-Fermor dev@lilithmf.com",
+  "license": "GPL 3.0",
+  "scripts": {
+    "start": "node app.js",
+    "postinstall": "node postinstall.js && npm unlink sswapsies && npm link",
+    "build": "pkg app.js -t node14-win-x64,node14-macos-x64,node14-macos-arm64 -o dist/sswap"
+  },
+  "dependencies": {
+    "chalk": "^4.1.2",
+    "fs-extra": "^10.0.0",
+    "inquirer": "8.2.4"
+  },
+  "bin": {
+    "sswapsies": "./app.js"
+  },
+  "devDependencies": {
+    "pkg": "^5.3.3"
+  }
+}
